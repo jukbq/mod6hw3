@@ -1,0 +1,21 @@
+<table class="table ">
+    <tr>
+        <th>#</th>
+        <th>Task</th>
+        <th>Check</th>
+        <th>Dobe/In progress</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+
+    <tr *ngFor="let task of arr; index as i ">
+        <td>{{i+1}}</td>
+        <td>{{task.taskName}}</td>
+        <td><input class="from-check-input" value="{{i}}" type="checkbox" [checked]="task.status" (change)="onChangeStatus($event)"> </td>
+        <td [style.color]="isColor ? 'green' : 'red'" >{{statusName}}</td>
+        <td><button type="button " (click)="edit() " class="btn btn-warning ">Edit</button></td>
+        <td><button type="button " (click)="del() " [disabled]="delStatus" class="btn btn-danger ">Delete</button></td>
+    </tr>
+
+
+</table>

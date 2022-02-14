@@ -1,0 +1,30 @@
+section {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #eeefef6e;
+}
+
+section .task {
+  width: 90vw;
+  height: auto;
+  margin: auto;
+}
+
+section .task .inputBlock {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .task .inputBlock input {
+  width: 80%;
+}
+
+section .task .inputBlock button {
+  width: 15%;
+}
+/*# sourceMappingURL=app.component.css.map */
