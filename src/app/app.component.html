@@ -10,15 +10,24 @@
         <hr>
 
         <div class="inputBlock">
-            <input class="form-control" [(ngModel)]="text" type="text" #name="ngModel" >
+            <input class="form-control" [(ngModel)]="text" type="text" #name="ngModel" required pattern="^[a-zA-z0-9]{3,10}">
             <button (click)="add()" type="submit" class="btn btn-success" [disabled]="this.name.invalid">Add</button>
         </div>
 
         <hr>
 
-        <app-table [arr]="taskArr" (index)="indexElement($event)" (status)="changeStatus($event)" ></app-table>
+        <app-table [arr]="taskArr" (index)="indexElement($event)" (status)="changeStatus($event)" (delete)="dellTask(index)" (editTask)="openEdit($event)">
+
+        </app-table>
+
+        <ng-container *ngIf="tempOn; then edutTask"></ng-container>
+
+        <ng-template #edutTask>
+            <div class="editBlock">
+                <input class="form-control" [(ngModel)]="editText" type="text" #name="ngModel">
+                <button (click)="save()" type="submit" class="btn btn-success" [disabled]="this.name.invalid">Save</button>
+            </div>
+
+        </ng-template>
     </div>
 </section>
-
-<!-- [taskStatus]="taskArr.status" -->
-<!-- required pattern="^[a-zA-z0-9]{3,10}" -->

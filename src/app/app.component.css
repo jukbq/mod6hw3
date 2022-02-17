@@ -27,4 +27,23 @@ section .task .inputBlock input {
 section .task .inputBlock button {
   width: 15%;
 }
+
+section .task .editBlock {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: gray;
+}
+
+section .task .editBlock input {
+  width: 80%;
+}
+
+section .task .editBlock button {
+  width: 15%;
+}
 /*# sourceMappingURL=app.component.css.map */

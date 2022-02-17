@@ -17,5 +17,22 @@ section {
                 width: 15%;
             }
         }
+        .editBlock {
+            width: 83%;
+            height: 70px;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            background-color: #80808047;
+            input {
+                width: 50%;
+                height: 40px;
+            }
+            button {
+                width: 15%;
+                height: 40px;
+                margin: 0 43px 0 20px;
+            }
+        }
     }
 }
